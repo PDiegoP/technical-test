@@ -1,0 +1,38 @@
+How did you approach the development of the frontend visualization?
+Describe how you managed the complexity of rendering dynamic JSON data and ensuring the user interface is clear and efficient. What libraries or techniques did you use to make this process scalable?
+
+- It was easier because the data had the position included of each node so It wasn't needed to think about the position of each node which would have been taken a lot of time to develop. 
+Of course it is scalable as long as there is a logic to calculate positions dinamically. Besides, by using css we can manage the width and height of the element in the canvas so we can be careful about overlapping issues.
+I used BEM as a way to have a better understanding of stylesheets and components as a group because when there are many nodes visualized in the canvas it is not easy to have in mind each div, label, edges, nodes and the like.
+
+What challenges did you face during the development process, and how did you overcome them?
+Discuss any obstacles you encountered while working with React, React Flow, Tailwind CSS, or the API integration, and explain how you solved them.
+
+The API integration was an obstacle regarding how the endpoints in the backend receive the data and how to reach them by environment variables so it was necessary to check the availability of each services using postman an others tools
+, even though the CSS was managed by my own stylesheetsI believed many of the styles were solved by the react flow library so it wasn't challenging. 
+I think the most challenging feature was the React Flow library due to my knowledge about it but I would say the official documentation of it was really helpful to achieve it
+
+How did you ensure that your solution can scale with larger datasets?
+What steps did you take to ensure the application remains performant and manageable as the size of the JSON data grows? Did you consider optimizations such as lazy loading, memoization, or virtualized rendering?
+
+It is scalable at the end because We didn't put any limit to the generation of nodes, it depends on how the JSON is structured and how the data is received from the backend endpoints, also React Library has its own stress text 
+https://reactflow.dev/examples/nodes/stress explaining how the use of this library is easily scalable to larger datasets
+
+What strategies did you implement to enhance interactivity and the user experience?
+How did you make the visualization interactive, and what user interface patterns or features did you use to improve the overall user experience?
+
+A textarea was added in order to allow the users to enter any structured JSON so that it would possible to see any structure as a tree in the application which is easier for people
+without technical understanding of structured data such as JSON.  It would great to allow the users to add new nodes by themselves which is achieveable with react flow itself and probably finding new ways to let them understand structured data
+
+How would you improve the app’s scalability and performance for future updates or features?
+If this project were to evolve or handle even larger and more complex datasets, how would you approach enhancing its scalability and performance?
+
+I think it would be a great improvement to allow the users to build a tree from 0 and get the JSON based on the nodes created by them.
+As it was mentioned, it is already possible with react flow, however good practices when coding should be always the way to achieve improvements 
+regarding the performance of the app.
+
+How did you identify and resolve the hidden bug in the API on the frontend side?
+Describe the process you used to identify the bug, how it impacted the data visualization, and how you fixed it within the frontend code.
+
+Well, it was easier to identify the issue once the tree was renderized even though the issues were on the backend. I solved by providing a new format to the labels,
+however once it was fixed, it was necessary to add some styles to improve the visualization of each node on the canvas.
