@@ -1,0 +1,31 @@
+.Node{
+    position: relative;
+    min-width: 100px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 10px 20px 30px #ccc;
+}
+
+.Node-KeyValuePair, .Node-Key, .Node-Value{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+}
+
+.Node-Information{
+    color: orange;
+    font-size: 16px;
+    padding-right: 10px;
+}   
+
+.Node:hover{
+    border: 2px solid #000;
+    z-index: 5;
+    font-weight: bold;
+    .Tooltip{
+        display: block;
+    }
+}
